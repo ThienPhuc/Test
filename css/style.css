@@ -1,0 +1,1411 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+audio[controls], canvas, video {
+	display: inline-block;
+*display: inline;
+*zoom: 1;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.231;
+}
+body, button, input, select, textarea {
+	font-family: sans-serif;
+	color: #222;
+}
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection {
+background: #fe57a1;
+color: #fff;
+text-shadow: none;
+}
+::selection {
+	background: #fe57a1;
+	color: #fff;
+	text-shadow: none;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a {
+	color: #00e;
+}
+a:visited {
+	color: #551a8b;
+}
+a:focus {
+	outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+	outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+blockquote {
+	margin: 1em 40px;
+}
+dfn {
+	font-style: italic;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+ins {
+	background: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+mark {
+	background: #ff0;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp {
+	font-family: monospace, monospace;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
+}
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+q {
+	quotes: none;
+}
+q:before, q:after {
+	content: "";
+	content: none;
+}
+small {
+	font-size: 85%;
+}
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol {
+	margin: 1em 0;
+	padding: 0 0 0 40px;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+nav ul, nav ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure {
+	margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend {
+	border: 0;
+*margin-left: -7px;
+	padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+	cursor: pointer;
+}
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+*vertical-align: middle;
+}
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input {
+	line-height: normal;
+*overflow: visible;
+}
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+/* Colors for form validity */
+input:valid, textarea:valid {
+}
+input:invalid, textarea:invalid {
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* =============================================================================
+   Primary styles
+   Author: 
+   ========================================================================== */
+
+
+
+
+
+
+
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir {
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+.ir br {
+	display: none;
+}
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+@font-face {
+	font-family: 'MuseoSans700';
+	src: url('museosans_700-webfont.eot');
+	src: url('museosans_700-webfont.eot?#iefix') format('embedded-opentype'),  url('museosans_700-webfont.woff') format('woff'),  url('museosans_700-webfont.ttf') format('truetype'),  url('museosans_700-webfont.svg#MuseoSans700') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MuseoSans500';
+	src: url('museosans_500-webfont.eot');
+	src: url('museosans_500-webfont.eot?#iefix') format('embedded-opentype'),  url('museosans_500-webfont.woff') format('woff'),  url('museosans_500-webfont.ttf') format('truetype'),  url('museosans_500-webfont.svg#MuseoSans500') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	background-color: #FFF;
+	background-image: url(../images/bg_top.png);
+	background-repeat: repeat-x;
+}
+#container {
+	width:1080px;
+	margin:0 auto;
+	min-height:300px;
+}
+header#header {
+	height:67px;
+	width:1080px;
+	float:left;
+}
+header#header .user_settings {
+	float:right;
+	width:227px;
+	height:46px;
+	margin-top:21px;
+}
+header#header .user_settings img {
+	margin-right:14px;
+}
+header#header .user_settings * {
+	float:right;
+}
+header#header .user_settings select {
+	margin-top:1px;
+	margin-left:14px;
+}
+header#header hgroup a.logo h1 {
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+	height: 33px;
+	margin: 0;
+	text-indent: -999px;
+	width: 147px;
+}
+header#header hgroup a.logo {
+	width:147px;
+	height:33px;
+	display:block;
+	float:left;
+	margin-top:21px;
+}
+header#header hgroup .add_api {
+	background-image: url("../images/btn_add_api.png");
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	font-family: 'MuseoSans500', arial;
+	font-size: 15px;
+	height: 34px;
+	line-height: 34px;
+	margin-left: 28px;
+	margin-top: 21px;
+	padding-left: 39px;
+	text-decoration: none;
+	width: 86px;
+}
+header#header hgroup span {
+	color: #F2F5F8;
+	float: left;
+	font-family: 'MuseoSans500', arial;
+	font-size: 14px;
+	margin-left: 18px;
+	margin-top: 29px;
+}
+header#header hgroup form * {
+	float:left;
+}
+header#header hgroup form input[type="text"] {
+	background-color: transparent;
+	background-image: url("../images/search_bg.png");
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 33px;
+	padding: 0 10px;
+	width: 239px;
+	margin-top:22px;
+	margin-left:32px;
+	font-family:'MuseoSans500', Helvetica, sans-serif;
+	color:#8e9091;
+	line-height:33px;
+}
+header#header hgroup form input[type="button"] {
+	margin-top:22px;
+	background-image: url(../images/search_btn_bg.png);
+	background-repeat: no-repeat;
+	width:46px;
+	height:33px;
+	border:none;
+	background-color:transparent;
+}
+nav#main_nav {
+	height:81px;
+	width:1080px;
+	float:left;
+}
+nav#main_nav .social {
+	float: right;
+	height: 81px;
+	margin-right: 13px;
+	width: 367px;
+}
+nav#main_nav .social .social_satis {
+	float: right;
+	margin-right: 6px;
+	margin-top: 34px;
+}
+nav#main_nav .social .social_satis * {
+	float:left;
+}
+nav#main_nav .social span {
+	background-image: url(../images/social1_middle.png);
+	background-repeat: repeat-x;
+	height:24px;
+	line-height:24px;
+	padding-left:5px;
+	padding-right:3px;
+	color:#4a4c5e;
+	font-size:11px;
+	font-family:'MuseoSans700', Helvetica, sans-serif;
+}
+nav#main_nav .breadcrumb {
+	color:#7f8592;
+	font-size:18px;
+	width:700px;
+	line-height:81px;
+	height:81px;
+}
+nav#main_nav .breadcrumb a {
+	font-family:'MuseoSans500', Helvetica, sans-serif;
+	color:#7f8592;
+	font-size:18px;
+	text-decoration:none;
+}
+nav#main_nav a.first {
+	color:#5b9ece;
+}
+#main {
+	float:left;
+}
+#main .ui-tabs {
+	border:none;
+	padding:0;
+}
+#main .ui-tabs .ui-tabs-nav {
+	border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	-o-border-radius:0;
+	-webkit-border-radius:0;
+	background-image: url("../images/tab_bg_header.png");
+	background-repeat: repeat-x;
+	border: medium none;
+	height: 50px;
+	padding: 0;
+}
+#main .ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+	color:#5a5e6f;
+}
+#main .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	background-image: url("../images/tab_bg_header_active.png");
+	background-repeat: repeat-x;
+	border: 1px solid #D9DDE7;
+	border-bottom:none;
+	height: 47px;
+}
+#main .ui-tabs .ui-tabs-nav li {
+	border:none;
+	background:none;
+}
+#main .ui-tabs .ui-tabs-nav li a {
+	color: #5B9ECE;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 14px;
+	height: 47px;
+	line-height: 53px;
+	padding: 0 11px;
+	outline:none;
+}
+#main .ui-tabs .ui-tabs-panel {
+	padding: 0;
+	width: 1080px;
+}
+#main .ui-tabs .ui-tabs-nav li a img {
+	float:left;
+	margin-top:16px;
+	margin-right:6px;
+}
+#main .ui-tabs aside {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float:right;
+	margin-top:32px;
+	width:420px;
+	margin-right:20px;
+	min-height:300px;
+	background-color: #f1f4f7;
+	background-image: url(../images/aside_bg.png);
+	background-repeat: repeat-x;
+	border:1px solid #d7dbe6;
+}
+#main .ui-tabs aside h3 {
+	color: #595E6C;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 15px;
+	height: 49px;
+	line-height: 49px;
+	margin: 0 0 0 14px;
+}
+#main .ui-tabs aside h3 span a {
+	float: right;
+	margin-right: 14px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size:12px;
+	color:#599ecc;
+	text-decoration:none;
+}
+#main .ui-tabs aside ul {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #D7DBE6;
+	float: left;
+	margin-left: 7px;
+	margin-top: 5px;
+	padding: 6px 0 7px 0;
+	width: 401px;
+}
+#main .ui-tabs aside ul li a {
+	color:#a9aa99;
+	font-size:13px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	text-decoration:none;
+}
+#main .ui-tabs aside ul li {
+	background-image: url(../images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	line-height:35px;
+	height:35px;
+	border-bottom:1px dotted #c3c6d1;
+	margin-left:11px;
+	margin-right:11px;
+	list-style-position: inside;
+}
+#main .ui-tabs aside ul li.green {
+	list-style-image: url("../images/list-item-aside.png");
+}
+#main .ui-tabs aside ul li.red {
+	list-style-image: url("../images/list-item-aside_red.png");
+}
+#main .ui-tabs aside ul li.ogran {
+	list-style-image: url("../images/list-item-aside_organ.png");
+}
+#main .ui-tabs aside ul li.last {
+	border-bottom:none;
+}
+#main .ui-tabs section.api_status {
+	float: left;
+	margin-right: 113px;
+	margin-top: 32px;
+	min-height: 300px;
+	width: 525px;
+}
+#main .ui-tabs section.api_status div.title h3 {
+	color:#5a5e6f;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size:16px;
+	margin:0;
+	height:23px;
+	line-height:23px;
+}
+#main .ui-tabs section.api_status div.title {
+	height:37px;
+	width:525px;
+	float:left;
+	border-bottom:1px solid #d7dbe6;
+}
+#main .ui-tabs section.api_status div.title * {
+	float:left;
+}
+#main .ui-tabs section.api_status div.title img {
+	margin-left:24px;
+	margin-right:6px;
+}
+#main .ui-tabs section.api_status div.title h4 {
+	color: #5A5E6F;
+	float: left;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 12px;
+	height: 23px;
+	line-height: 23px;
+	margin: 0;
+}
+#main .ui-tabs section.api_status ul {
+	float: left;
+	margin: 4px 0 30px;
+	padding: 0;
+}
+#main .ui-tabs section.api_status ul li {
+	height:80px;
+	width:525px;
+	list-style:none;
+	background-image: url(../images/section_bg_border.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	float:left;
+}
+#main .ui-tabs section.api_status ul li.last {
+	background:none;
+}
+#main .ui-tabs section.api_status ul li a.status {
+	float:right;
+	margin-top:18px;
+	margin-right:3px;
+}
+#main .ui-tabs section.api_status ul li p {
+	float: left;
+	margin: 0;
+	min-width: 400px;
+	max-width:465px
+}
+#main .ui-tabs section.api_status ul li p.description {
+	margin-top:18px;
+	line-height:17px;
+	font-size:14px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	color:#5a5e6f;
+}
+#main .ui-tabs section.api_status ul li p.description span {
+	padding:1px 5px;
+	background:#64b9e6;
+	color:#fff;
+}
+#main .ui-tabs section.api_status ul li p.method {
+	line-height:17px;
+	font-size:14px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	color:#5a5e6f;
+	font-style:italic;
+	margin-top:7px;
+}
+/*Tab2 css--------------------------------------------------------------------------*/
+#main .ui-tabs section.basic_info {
+	margin-top:32px;
+	float: left;
+	width:1080px;
+}
+#main .ui-tabs section.basic_info div.block {
+	margin-bottom:32px;
+	width:751px;
+	float:left;
+}
+#main .ui-tabs section.basic_info div.block span {
+	display: block;
+	float: left;
+	text-align: right;
+	width: 116px;
+	color:#5a5e6f;
+	font-size:14px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	margin-right:18px;
+}
+#main .ui-tabs section.basic_info div.block input[type="text"], #main .ui-tabs section.proxy_settings .block2 p input[type="text"] {
+	background-image: url(../../images/textbox_bg.png);
+	background-repeat: no-repeat;
+	width:278px;
+	height:35px;
+	line-height:35px;
+	padding:0 14px;
+	border:none;
+	color:#bfc4ca;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+}
+#main .ui-tabs section.basic_info div.block1 {
+	margin-top:4px;
+}
+#main .ui-tabs section.basic_info div.block1 span {
+	height:35px;
+	line-height:35px;
+}
+#main .ui-tabs section.basic_info div.block2 span {
+	height:72px;
+	line-height:72px;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload_right {
+	float:left;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload img.upload {
+	padding:7px 6px;
+	border:1px solid #d7dbe6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	min-width:150px;
+	min-height:56px;
+	float:left;
+	margin-right:20px;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload_right p.last {
+	height:33px;
+	line-height:33px;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload_right p.first {
+	width: 420px;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload_right p.first a {
+	float:left;
+	width:125px;
+	height:29px;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload_right p {
+	height:29px;
+	margin: 0;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload_right p.first span {
+	height: 22px;
+	line-height: 22px;
+	margin-bottom: 7px;
+	margin-left: 20px;
+	text-align: left;
+}
+#main .ui-tabs section.basic_info div.block2 .logo_upload_right p.last {
+	color:#91b7d2;
+	font-size:12px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+}
+#main .ui-tabs section.basic_info div.block3 textarea {
+	background-image: url("../../images/textarea.png");
+	background-repeat: no-repeat;
+	border: medium none;
+	float: left;
+	height: 106px;
+	padding: 10px;
+	width: 597px;
+}
+/* dynamically created SPAN, placed below the SELECT */
+#main .ui-tabs section.basic_info div.block span.select {
+	background-image: url("../../images/select_bg2.png");
+	background-repeat: no-repeat;
+	color: #bfc4ca;
+	height: 35px !important;
+	width: 306px !important;
+	text-align:left;
+}
+#main .ui-tabs section.basic_info div.block select.select {
+	height: 35px !important;
+	line-height: 35px !important;
+	width: 306px !important;
+}
+#container #main .ui-tabs section.basic_info div.block4 span {
+	line-height:35px;
+}
+#container #main .ui-tabs section.basic_info div.block5 a {
+	display: block;
+	float: right;
+	height: 29px;
+	width: 67px;
+}
+/*Tab3 css--------------------------------------------------------------------------*/
+#main .ui-tabs section.proxy_settings {
+	float: left;
+	margin-top: 40px;
+	width: 1080px;
+}
+#main .ui-tabs section.proxy_settings .block {
+	float: left;
+	width: 714px;
+}
+#main .ui-tabs section.proxy_settings .block1 {
+	padding-bottom: 8px;
+	border-bottom: 1px solid #D7DBE6;
+}
+#main .ui-tabs section.proxy_settings .block1 p {
+	height: 28px;
+	margin-bottom: 17px;
+	margin-top: 0;
+	width: 714px;
+}
+#main .ui-tabs section.proxy_settings .block1 p span.first {
+	height:28px;
+	line-height:28px;
+	text-align:right;
+	width:116px;
+	margin-right:16px;
+	float:left;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size:14px;
+	color:#5a5e6f;
+}
+#main .ui-tabs section.proxy_settings .block1 p span.last {
+	background-color: #F8F1CA;
+	color: #8A814C;
+	float: left;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 7px;
+}
+#main .ui-tabs section.proxy_settings .block2 p.title {
+	color: #5A5E6F;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 12px;
+	height: 46px;
+	line-height: 46px;
+	margin-bottom: 2px;
+	margin-left: 11px;
+	margin-top: 0;
+}
+#main .ui-tabs section.proxy_settings .block2 p {
+	margin-top:0;
+	margin-bottom:30px;
+}
+#main .ui-tabs section.proxy_settings .block2 p span.alias {
+	float: left;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 14px;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 16px;
+	text-align: right;
+	width: 116px;
+	color:#5a5e6f;
+}
+#main .ui-tabs section.proxy_settings .block3 {
+	border:1px solid #dd8c8c;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height:48px;
+	width:712px;
+	background-color:#f8ecec;
+}
+#main .ui-tabs section.proxy_settings .block3 p {
+	margin:0;
+}
+#main .ui-tabs section.proxy_settings .block3 p span.first {
+	color:#c53234;
+	font-size:14px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	height:48px;
+	line-height:48px;
+	margin-left:11px;
+	margin-right:12px;
+}
+#main .ui-tabs section.proxy_settings .block3 p span.last {
+	color:#c53234;
+	font-size:12px;
+	height:48px;
+	line-height:48px;
+}
+#main .ui-tabs section.proxy_settings .block3 p input[type="text"] {
+	margin-top:5px;
+	background-image: url(../images/tx_bg.png);
+	background-repeat: no-repeat;
+	width:286px;
+	height:35px;
+	line-height:35px;
+	padding:0 10px;
+	border:none;
+	color:#bfc4ca;
+	margin-right:16px;
+}
+#main .ui-tabs section.proxy_settings .block4 {
+	margin-top:39px;
+}
+#main .ui-tabs section.proxy_settings .block4 a {
+	margin-right:8px;
+	float:right;
+	width:67px;
+	height:29px;
+	display:block;
+}
+/*-----------Profile Account-------------------------------------------------------------------*/
+article {
+	margin-bottom:30px;
+}
+.profile aside {
+	float:left;
+	width:308px;
+}
+.profile ul {
+	margin:0;
+	padding:0;
+	width:306px;
+	background:#f1f4f7;
+	border:1px solid #d7dbe6;
+}
+.profile ul li {
+	list-style:none;
+	height:45px;
+	width:306px;
+	line-height:45px;
+	border-bottom:1px solid #d7dbe6;
+}
+.profile ul li.last {
+	border-bottom:none;
+}
+.profile ul li.last.active {
+	height:45px;
+}
+.profile ul li.active {
+	width:330px;
+	background-image: url(../images/menu_active.png);
+	background-repeat: no-repeat;
+	height:46px;
+	border-bottom:none;
+	margin-right:-24px;
+}
+.profile aside ul li.active a span {
+	color:#a9aa99;
+}
+.profile ul li a {
+	float: left;
+	height: 45px;
+	text-decoration: none;
+	width: 306px;
+}
+.profile ul li a img {
+	margin-left:11px;
+	margin-top:7px;
+	margin-right:16px;
+	float:left;
+}
+.profile aside ul li a span {
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	color:#5b9ece;
+	font-size:14px;
+	float:left;
+}
+.account {
+	width:717px;
+	float:right;
+	margin-right:6px;
+}
+.profile article .password_title {
+	margin-top:19px;
+}
+.profile article .title {
+	background: #F2F5F8;
+	border: 1px solid #D7DBE6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 12px;
+	width: 703px;
+}
+.profile article .title span {
+	font-size: 16px;
+	color: #5a5e6f;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-weight: bold;
+}
+.profile article p {
+	color: #5A5E6F;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 13px;
+	margin: 23px auto;
+	padding-left: 12px;
+}
+.profile article h1 {
+	color: #5A5E6F;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 29px;
+	margin: 0;
+	padding-left: 12px;
+}
+.profile article form {
+}
+.profile article input[type="text"] {
+	background-color: transparent;
+	background-image: url("../images/txt_bg.png");
+	background-repeat: no-repeat;
+	border: medium none;
+	color: #8E9091;
+	font-family: Helvetical Neue, Helvetica, sans-serif;
+	height: 36px;
+	line-height: 36px;
+	margin-bottom: 26px;
+	padding: 0 10px;
+	width: 305px;
+	margin-left:12px;
+}
+.profile article .check {
+	background: none repeat scroll 0 0 #F2F5F8;
+	border: 1px solid #D7DBE6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 71px;
+	padding-left: 12px;
+	width: 703px;
+}
+.profile article .check a {
+	border: 1px solid #D7DBE6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: right;
+	height: 25px;
+	line-height: 25px;
+	margin: 22px 16px;
+	text-align: center;
+	width: 122px;
+	text-decoration: none;
+}
+.profile article .check .check-box {
+	float: left;
+}
+.profile article .check .check-box label {
+	display: inline;
+	float: left;
+	line-height: 71px;
+}
+.profile article .check .check-box label span {
+	color: #5a5e6f;
+	font-size: 13px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+}
+.profile article .check a span {
+	color:#b9bdc4;
+	font-size: 13px;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+}
+.profile article .check input span {
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 13px;
+	color: #5a5e6f;
+}
+.profile article img {
+	float: right;
+	margin-right: 9px;
+	margin-top: 30px;
+}
+/*-----------Profile Billing-------------------------------------------------------------------*/
+
+#container .billing-profile aside {
+	float:left;
+	width:308px;
+}
+#container .billing-profile ul {
+	margin:0;
+	padding:0;
+	width:306px;
+	background:#f1f4f7;
+	border:1px solid #d7dbe6;
+}
+#container .billing-profile ul li {
+	list-style:none;
+	height:45px;
+	width:306px;
+	line-height:45px;
+	border-bottom:1px solid #d7dbe6;
+}
+#container .billing-profile ul li.last {
+	border-bottom:none;
+}
+#container .billing-profile ul li.last.active {
+	height:45px;
+}
+#container .billing-profile ul li.active {
+	width:330px;
+	background-image: url(../images/menu_active.png);
+	background-repeat: no-repeat;
+	height:46px;
+	border-bottom:none;
+	margin-right:-24px;
+}
+#container .billing-profile aside ul li.active a span {
+	color:#a9aa99;
+}
+#container .billing-profile ul li a {
+	float: left;
+	height: 45px;
+	text-decoration: none;
+	width: 306px;
+}
+#container .billing-profile ul li a img {
+	margin-left:11px;
+	margin-top:7px;
+	margin-right:16px;
+	float:left;
+}
+#container .billing-profile aside ul li a span {
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	color:#5b9ece;
+	font-size:14px;
+	float:left;
+}
+#container .billing {
+	width:717px;
+	float:right;
+}
+#container .billing-profile article .line_1 {
+	background: none repeat scroll 0 0 #F2F5F8;
+	border: 1px solid #D7DBE6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 95px;
+	margin-bottom: 25px;
+	width: 715px;
+}
+#container .billing-profile article .line_1 .left {
+	float:left;
+}
+#container .billing-profile article .line_1 span {
+	color: #5A5E6F;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 14px;
+	padding-top: 20px;
+}
+#container .billing-profile article .line_1 .left .update {
+	border: 1px solid #D7DBE6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 25px;
+	line-height: 25px;
+	text-decoration: none;
+	width: 173px;
+	text-align:center;
+}
+#container .billing-profile article .line_1 .update span {
+	color: #B9BDC4;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 13px;
+}
+#container .billing-profile article .line_1 {
+}
+#container .billing-profile article .line_1 a {
+	color: #5B9ECE;
+	float: right;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 14px;
+	margin-right: 10px;
+}
+#container .billing-profile article .line_2 {
+	background: #f2f5f8;
+	border: 1px solid #D7DBE6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	width: 715px;
+	margin-bottom: 25px;
+	padding-left:12px;
+}
+#container .billing-profile article .line_2 span {
+	color: #5A5E6F;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+#container .billing-profile article .line_3 {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #D7DBE6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 87px;
+	width: 695px;
+	margin-left:12px;
+	margin-bottom: 29px;
+}
+#container .billing-profile article .line_3 .detail img {
+	float: left;
+}
+#container .billing-profile article .line_3 .credit-card {
+	float:right;
+}
+#container .billing-profile article h1 {
+	color: #5A5E6F;
+	font-family: 'MuseoSans500', Helvetica, sans-serif;
+	font-size: 13px;
+	padding-left: 12px;
+}
+#container .billing-profile article input[type="text"] {
+	background-color: transparent;
+	background-image: url("../images/name_number_txt_bg.png");
+	background-repeat: no-repeat;
+	border: medium none;
+	color: #8E9091;
+	font-family: Helvetical Neue, Helvetica, sans-serif;
+	height: 35px;
+	line-height: 35px;
+	margin-bottom: 37px;
+	margin-left: 12px;
+	padding: 0 10px;
+	width: 286px;
+}
+#container .billing-profile article select {
+	background-color: transparent;
+	background-image: url("../images/exp_date.png");
+	background-repeat: no-repeat;
+	border: medium none;
+	color: #8E9091;
+	font-family: Helvetical Neue, Helvetica, sans-serif;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+	width: 211px;
+}
+#container .billing-profile article .line_4 .left {
+	float:left;
+}
+#container .billing-profile article .line_4 .right {
+	float:right;
+	;
+}
+#container .billing-profile article .line_5 .left {
+	float:left;
+}
+#container .billing-profile article .line_5 .mid {
+	float:left;
+}
+#container .billing-profile article .line_5 .right {
+	float:right;
+	;
+}
+/* all form DIVs have position property set to relative so we can easily position newly created SPAN */
+form.select_form div {
+	color: #626262;
+	float: left;
+	font-size: 12px;
+	height: 34px;
+	position: relative;
+	width: 155px;
+}
+/* setting the width and height of the SELECT element to match the replacing graphics */
+select.select {
+	height: 34px !important;
+	line-height: 34px;
+	position: relative;
+	width: 155px !important;
+}
+/* dynamically created SPAN, placed below the SELECT */
+span.select {
+	background: url("../images/select_box2.png") no-repeat scroll 0 0 transparent;
+	bottom: 0;
+	cursor: default;
+	height: 34px;
+	left: 0;
+	line-height: 34px;
+	position: absolute;
+	text-indent: 10px;
+	width: 155px;
+	z-index: 1;
+	color:#fbfcfd;
+	font-size:14px;
+	font-family:'MuseoSans500', Helvetica, sans-serif;
+}
+/* =============================================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+/* Style adjustments for viewports 480px and over go here */
+
+}
+ @media only screen and (min-width: 768px) {
+/* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+* {
+	background: transparent !important;
+	color: black !important;
+	text-shadow: none !important;
+	filter:none !important;
+	-ms-filter: none !important;
+} /* Black prints faster: sanbeiji.com/archives/953 */
+a, a:visited {
+	color: #444 !important;
+	text-decoration: underline;
+}
+a[href]:after {
+	content: " (" attr(href) ")";
+}
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+	content: "";
+}  /* Don't show links for images, or javascript/internal links */
+pre, blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
+thead {
+	display: table-header-group;
+} /* css-discuss.incutio.com/wiki/Printing_Tables */
+tr, img {
+	page-break-inside: avoid;
+}
+img {
+	max-width: 100% !important;
+}
+ @page {
+margin: 0.5cm;
+}
+p, h2, h3 {
+	orphans: 3;
+	widows: 3;
+}
+h2, h3 {
+	page-break-after: avoid;
+}
+}
